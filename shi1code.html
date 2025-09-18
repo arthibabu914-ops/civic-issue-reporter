@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Civic Issue Reporter - GreenVisionari Girls</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛠️ Civic Issue Reporter</h1>
+    <p>Smart India Hackathon 2025 - Carpit & Drainage Issues</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>📌 Report an Issue</h2>
+      <form id="issueForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="issueType">Select Issue Type:</label>
+        <select id="issueType" name="issueType" required>
+          <option value="">--Choose--</option>
+          <option value="carpit">Carpit (Pothole)</option>
+          <option value="drainage">Drainage Issue</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Street/Area" required />
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+
+        <button type="submit">Submit Report</button>
+      </form>
+    </section>
+
+    <section class="output" id="output">
+      <!-- Submitted reports will appear here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 GreenVisionari Girls | Smart India Hackathon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

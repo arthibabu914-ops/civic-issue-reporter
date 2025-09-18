@@ -1,0 +1,32 @@
+<!-- Example HTML structure -->
+<form id="issueForm">
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="text" id="issueType" placeholder="Issue Type" required />
+  <input type="text" id="location" placeholder="Location" required />
+  <button type="submit">Submit</button>
+</form>
+
+<div id="output"></div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("issueForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const issueType = document.getElementById("issueType").value;
+      const location = document.getElementById("location").value;
+
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = `
+        <h3>✅ Report Submitted</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Issue Type:</strong> ${issueType}</p>
+        <p><strong>Location:</strong> ${location}</p>
+        <p>Status: <b>Reported</b></p>
+      `;
+
+      alert("Your issue has been reported successfully!");
+    });
+  });
+</script>
